@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Image Captioning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1><img src="https://img.icons8.com/fluency/48/image.png" class="icon"> AI Image Captioning</h1>
+
+        <form method="POST" enctype="multipart/form-data" class="form">
+            <input type="file" name="image" required>
+            <button type="submit">Generate Caption</button>
+        </form>
+
+        {% if image_path %}
+            <div class="output-card">
+                <img src="{{ image_path }}" alt="Uploaded Image">
+                <p><strong>Caption:</strong> {{ caption }}</p>
+            </div>
+        {% endif %}
+
+        {% if gallery %}
+            <h2 class="recent-heading">🖼️ Recent Captions</h2>
+            <div class="gallery-scroll">
+                {% for item in gallery %}
+                    <div class="gallery-card">
+                        <img src="{{ item.image }}" alt="Previous image">
+                        <p>{{ item.caption }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

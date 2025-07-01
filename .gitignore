@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Flask instance folder
+instance/
+uploads/
+*.log
+
+# Gallery log file
+gallery_log.txt
+
+# VSCode and other IDEss
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python cache
+*.pyc
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Pip environment
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyTorch or model downloads (if applicable)
+*.pth
+*.pt
+
+# Jupyter Notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# __MACOSX folders from zips
+__MACOSX/
+
+#Unwanted files 
+random.txt
+test.jpg
+test_app.py
